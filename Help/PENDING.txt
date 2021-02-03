@@ -1,0 +1,10 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - PENDING
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. PENDING is used by IRC Operators to either
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. accept or reject pending user requests such as a new
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. vhost request by a user.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCOp with at least level  $+ $netconf(opercmds,pending)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp PENDING [accept/reject] [nickname] [item]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. /msg SysOp PENDING on its own will list all pending items
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

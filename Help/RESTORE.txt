@@ -1,0 +1,12 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - RESTORE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This function will restore every system database
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. based on the backup ID you specify, if no backup ID is
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. specified the last backup will be used. This command can only be used
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. by IRC operators with the correct level  $+ $netconf(opercmds,databases) $+ .
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You may also delete a backup by typing DELETE after the backup ID
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Like this, /msg $netconf(system,nickname) RESTORE 12345 DELETE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg $netconf(system,nickname) RESTORE [BackupID]
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

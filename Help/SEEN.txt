@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - SEEN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Seen will show you when a certain user was
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. last seen by $netconf(system,nickname) on the network.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Anyone can use this command in any registered channel.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .SEEN <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

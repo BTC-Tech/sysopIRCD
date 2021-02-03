@@ -1,0 +1,10 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - FRGOTPASS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Providing you supplied a valid email address whn registering your nickname
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp can email you a new password if you forget the old one.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. To do this you must supply the email address associated with your account.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. It is your responsability to keep your email address upto date
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. using the EDITEMAIL command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp FORGOTPASS <nickname> <emailaddress>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - DOWN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. DOWN can be used when you are in a channel that you
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. have at least Friend Access too. The DOWN command
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. will remove modes on you according to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. your channel access example operators get -ov on DOWN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .DOWN
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

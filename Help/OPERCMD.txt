@@ -1,0 +1,17 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - OPERCMD
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OPERCMD is a powerfull tool used for IRC operators
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to manage the oper command settings for SysOp
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCop level  $+ $netconf(opercmds,xset) $+  to view or change OPERCMD.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Each OPER command's access can be edited via this command
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. its broken up into LEVELS for each command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. LEVEL refers to the level of IRC operator.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Levels can be zero to 500
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.How To: OPERCMD <cmd> <levelnumeric>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.Example: /msg $netconf(system,nickname) OPERCMD XSET 500
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. would mean only IRCOps with level 500 could use XSET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. End of OPERCMD Help
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

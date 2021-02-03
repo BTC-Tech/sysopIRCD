@@ -1,0 +1,11 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - OPERABUSE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. When this command is used on a nickname that member
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. will not be able to be an IRC operator whilst in the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. system blacklist. Only when they are removed can they
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. gain access to any IRC operator level they may have access too.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCOp with level  $+ $netconf(opercmds,operabuse) $+  to use OPERABUSE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Add: /msg $netconf(system,nickname) OPERABUSE <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Remove: /msg $netconf(system,nickname) OPERABUSE REMOVE <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

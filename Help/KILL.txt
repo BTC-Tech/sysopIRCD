@@ -1,0 +1,7 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - KILL
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This will kill a user from the network instantly
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. with or without a reason if specified.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you must be an IRCOp level  $+ $netconf(opercmds,kill) 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp KILL <nickname> [reason]
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

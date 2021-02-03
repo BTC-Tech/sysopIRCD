@@ -1,0 +1,16 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Help & Information - Adding/Removing Channel Bans And Kicks
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Providing you have access to the channel and you dont try to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. perform these commands on users with higher or equal access
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. as yourself, you can ban and kick users in any registered channel.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. IF SET BANTIME enabled channel bans will expire automatically, if not
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. they will remain until someone removes the ban.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Available Commands Are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. KICK - Kicks a user from the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. KICKBAN - Kick and ban a user so they cant rejoin
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BAN - Ban a user from the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BANS - View all active bans on the channel.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. UNBAN - Remove a ban from the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. See /msg sysop HELP <command> for more information
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

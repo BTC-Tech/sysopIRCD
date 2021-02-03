@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - EDITEMAIL
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. If youy have a registered nickname then it is a good idea to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. keep your email address saved on file upto date.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This will allow you to use the FORGOTPASS and other commands.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp EDITEMAIL <password> <NEW emailaddress>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

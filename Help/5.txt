@@ -1,0 +1,37 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Help & Information - IRCop Features
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. IRCops are given operlevels between 0 and 500
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Each IRCop command has its own access level which
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you must have higher access to use
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Some Available IRCop features are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. GLOBALNOTICE <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. RESTART - Reconnect the services
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OPERABUSE <nickname> - Blacklist a user from opering up
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. KILL <nickname> [reason]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. GLINE <nickname> <time> [reason]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Time Format is: 0d0h0m0s
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. RENICK <nickname> <new nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. XSET See HELP XSET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OPERCMD See HELP OPERCMD
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. CHANCMD See HELP CHANCMD
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. RANDOMNEWS <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OPERNEWS <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. LOGONNEWS <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OPERACCESS See HELP OPERACCESS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OPERASET See HELP OPERASET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BADWORDS or BADWORDS ADD <word>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. PURGESEEN See HELP PURGESEEN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. JUPE <Server> creates a dummy server
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. DATABASES - View system database information
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BACKUP [description] - Create a system backup
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BACKUPS - View all available backups
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. RESTORE [ID] - Restore a backup by ID or leave ID blank
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to restore the most recent backup
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. HLIST <*host*> - List registered users with matching wildcard host
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. AGLINE - Auto gline a user whenever they connect
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. AKILL - Auto kill a user whenever they connect
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. NICKBAN - Auto ban certain nicknames when connecting
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. CHANNELBL - Blacklist channel names and wildcards
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. <> are not required they are simply for demonstration.
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

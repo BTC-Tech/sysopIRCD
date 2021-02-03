@@ -1,0 +1,36 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - SET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SET controls all aspects of a registered channel settings.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Things like AutopOp or AutoVoice are dealt with via SET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Users with enough access to SET can change default topics
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. and other default channel settings.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Available SET options are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Topic - Changes the default topic
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. URL - Sets a channel URL for CHANINFO
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Modes - Changes the default channel modes
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. StrictOp  [on/off] - When ON only allows users with access to be opped
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SpamFilter  [on/off] - Channel Protection from spammers
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Suspend  [off/reason] - IRCops use this to suspend a channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. InChan    [on/off] - Admin use this to have SysOp join/leave a channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BadLang   [on/off] - When ON kicks any user without access for swearing
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. AutoOp    [on/off] - When ON users with access get certain modes on join
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. AutoVoice [on/off] - When on +v all access users on join (voice)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BanTimeOut [0-3] - Bans Expire after a certain amount of time
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. TopicLock [off/2-5] - Users with this level and above can change topics
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. TopicFreq [on/off] - Have SysOp refresh topic every 4 hours
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Trigger [character] - The channels public command trigger character
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. JoinMsg [off/message] - Display a message to users who join the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SayAccess    [2-5] - The level of access to which users can use SAY
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Founder   <nickname> - Sets a new channel registrar to take over the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SetAccess    [3-5] - The level of access to which users can use SET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. CapKick    [0-100] - Percent of capital letters to revoke a channel kick,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Setting CapKick to 0 will disable function.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Default SetAccess is 4 for Co-Owner's and above.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Loging    [on/off] - Log certain channel events, adduser etc..
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. NoExpire    [on/off] - Stops channel from expiry when on
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp SET #channel <option> [value]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .SET <option> [value]
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

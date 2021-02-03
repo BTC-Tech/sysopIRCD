@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CYCLE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. CYCLE forces SysOp to leave and rejoin every
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. registered channel, unless the chanel is suspended
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. or inchan is set off. The purpose of this command is to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. refresh topicfreq timers, channel settings and topics in 1 cycle.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you must be an IRCOp level  $+ $netconf(opercmds,cycle) 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp CYCLE
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

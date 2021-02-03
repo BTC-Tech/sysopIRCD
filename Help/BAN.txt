@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - BAN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BAN can be used by anyone on the channel access list
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. but you cannot ban a user with higher access
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. than yourself.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .ban <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Private: /msg SysOp BAN <#channel> <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

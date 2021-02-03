@@ -1,0 +1,14 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Help & Information - Log into SysOp
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. When you connect to the network using a registered nickname
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp will ask you to login and give you 60 seconds to do so.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. If you do not login after 60 seconds or change your nickname,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp will change it for you. If you have forgoten your password
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you can have SysOp email it to you using FORGOTPASS (HELP FORGOTPASS)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. If you did not supply a valid email address upon registration then
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. FORGOTPASS will be useless and your account lost.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp IDENTIFY <password>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. <> are not required they are simply for demonstration.
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

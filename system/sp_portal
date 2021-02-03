@@ -1,0 +1,612 @@
+alias web.shout {
+  .sockwrite -tn serv :Global PRIVMSG $1 Web Shout From [ $+ $2 $+  $+ ] $3-
+}
+alias qdb.done {
+  .remini data/web_pending.db $1
+  .qdb_pending
+  .web_pending
+}
+alias web_chanlist {
+  if ($netconf(system,webportal) == on) {
+    remove inc_irc_chanlist.asp
+    var %x 1
+    while ($ini(data\activechans.db,%x)) {
+      if ($ini(data\activechans.db,%x) != #staff) {
+        write inc_irc_chanlist.asp $chr(60) $+ $chr(37) spThemeTitle = $chr(34) $+ $ini(data\activechans.db,%x) $+ $chr(34)
+        write inc_irc_chanlist.asp spThemeBlock1_open(intSkin) $chr(37) $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ table width="100 $+ $chr(37) " border="0" cellspacing="0" cellpadding="0" $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ tr $+ $chr(62) 
+        write inc_irc_chanlist.asp $chr(60) $+ td align="center" valign="middle" $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ p align="left" style="margin-top: 0; margin-bottom: 0" $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ font class="fTitle" $+ $chr(62) $+ Channel Details: $+ $chr(60) $+ /font $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100 $+ $chr(37) $+ " $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ tr $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ td align="right" $+ $chr(62) $+ Topic :  $+ $chr(60) $+ /td $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ td $+ $chr(62) $+ &nbsp; $+ $remove($read(data/set_topics.txt, s, $ini(data\activechans.db,%x) $+ :),$ini(data\activechans.db,%x) $+ :) $+ $chr(60) $+ /td $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ /tr $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ tr $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ td align="right" $+ $chr(62) $+ Users :  $+ $chr(60) $+ /td $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ td $+ $chr(62) $+ &nbsp; $+ $ini(data\activechans.db,$ini(data\activechans.db,%x),0) $+ $chr(60) $+ /td $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ /tr $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ tr $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ td align="right" $+ $chr(62) $+ Channel Registered :  $+ $chr(60) $+ /td $+ $chr(62)
+        if ($readchan($ini(data\activechans.db,%x),channel)) {
+          write inc_irc_chanlist.asp $chr(60) $+ td $+ $chr(62) $+ &nbsp; $+ Yes $+ $chr(60) $+ /td $+ $chr(62)
+        }
+        else {
+          write inc_irc_chanlist.asp $chr(60) $+ td $+ $chr(62) $+ &nbsp; $+ No $+ $chr(60) $+ /td $+ $chr(62)
+        }
+        write inc_irc_chanlist.asp $chr(60) $+ /tr $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ /table $+ $chr(62)
+        write inc_irc_chanlist.asp &nbsp; $+ $chr(60) $+ /td $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ /tr $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ /table $+ $chr(62)
+        write inc_irc_chanlist.asp $chr(60) $+ $chr(37) spThemeBlock1_close(intSkin) $chr(37)  $+ $chr(62)
+      }
+      inc %x
+    }
+    copy -o inc_irc_chanlist.asp $netconf(system,webfolder)
+  }
+}
+alias web_livestats {
+  if ($netconf(system,webportal) == on) {
+    remove inc_irc_livestats.asp
+    write inc_irc_livestats.asp $chr(60) $+ tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="100%" colspan="2" $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ p align="center" $+ $chr(62) $+ $+ $chr(60) $+ font class="fAlert" $+ $chr(62) $+ Live Stats $+ $chr(60) $+ /font $+ $chr(62) $+ $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ /tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="70%" align="right" $+ $chr(62) $+ Users Online : $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="30%" align="center" $+ $chr(62) $+ $+ $chr(60) $+ font class="fBold" $+ $chr(62) $+ $ini(data/clients.db,0) $+ $chr(60) $+ /font $+ $chr(62) $+ $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ /tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="70%" align="right" $+ $chr(62) $+ Active Channels : $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="30%" align="center" $+ $chr(62) $+ $+ $chr(60) $+ font class="fBold" $+ $chr(62) $+ $ini(data/activechans.db,0) $+ $chr(60) $+ /font $+ $chr(62) $+ $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ /tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="70%" align="right" $+ $chr(62) $+ Registered Users : $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="30%" align="center" $+ $chr(62) $+ $+ $chr(60) $+ font class="fBold" $+ $chr(62) $+  $ini(data/nicknames.db,0) $+ $chr(60) $+ /font $+ $chr(62) $+ $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ /tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ tr $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="70%" align="right" $+ $chr(62) $+ Operators Online : $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ td width="30%" align="center" $+ $chr(62) $+ $+ $chr(60) $+ font class="fBold" $+ $chr(62) $+ $ini(data/admin.db,0) $+ $chr(60) $+ /font $+ $chr(62) $+ $+ $chr(60) $+ /td $+ $chr(62) $+ 
+    write inc_irc_livestats.asp $chr(60) $+ /tr $+ $chr(62) $+ 
+    copy -o inc_irc_livestats.asp $netconf(system,webfolder) 
+    remove inc_irc_onlineusers.asp
+    write inc_irc_onlineusers.asp $chr(60) $+ $chr(37)    
+    write inc_irc_onlineusers.asp irc_onlineusers = $ini(data/clients.db,0)
+    write inc_irc_onlineusers.asp $chr(37) $+ $chr(62) 
+    copy -o inc_irc_onlineusers.asp $netconf(system,webfolder) 
+  }
+}
+alias web_chanselect {
+  remove inc_irc_chanselect.asp
+  write inc_irc_chanselect.asp $chr(60) $+ $chr(37) 'Chan select include $chr(37) $+ $chr(62)
+  var %x 1
+  while ($ini(data\activechans.db,%x)) {
+    if ($ini(data\activechans.db,%x) != #staff) {
+      write inc_irc_chanselect.asp $chr(60) $+ option value=" $+ $ini(data\activechans.db,%x) $+ " $+ $chr(62) $+ $ini(data\activechans.db,%x) $+ $chr(60) $+ /option $+ $chr(62)
+    }
+    inc %x
+  }
+  copy -o inc_irc_chanselect.asp $netconf(system,webfolder)
+}
+
+alias web_chanDB {
+  remove inc_irc_chanDB.asp
+  var %x 1
+  write inc_irc_chanDB.asp $chr(60) $+ $chr(37)
+  write inc_irc_chanDB.asp '::::: IRC CHANNEL DATABASE :::::
+  ;write inc_irc_chanDB.asp function irc_chanDB $+ $chr(40) $+ iChan $+ $chr(41)
+  write inc_irc_chanDB.asp select case iChan
+
+  while ($ini(data\channels.db,%x)) {
+    var %eChan $ini(data\channels.db,%x)
+    write inc_irc_chanDB.asp case " $+ %eChan $+ "
+    write inc_irc_chanDB.asp iChan_owner = " $+ $readchan(%eChan,owner) $+ "
+    write inc_irc_chanDB.asp iChan_datereg = " $+ $asctime($readchan(%eChan,datereg)) $+ "
+    write inc_irc_chanDB.asp iChan_lastvisit = " $+ $asctime($readchan(%eChan,lastvisit)) $+ "
+    write inc_irc_chanDB.asp iChan_modes = " $+ $readchan(%eChan,modes) $+ "
+    write inc_irc_chanDB.asp iChan_autoop = " $+ $readchan(%eChan,autoop) $+ "
+    write inc_irc_chanDB.asp iChan_badlang = " $+ $readchan(%eChan,badlang) $+ "
+    write inc_irc_chanDB.asp iChan_inchan = " $+ $readchan(%eChan,inchan) $+ "
+    write inc_irc_chanDB.asp iChan_voice = " $+ $readchan(%eChan,voice) $+ "
+    write inc_irc_chanDB.asp iChan_clones = " $+ $readchan(%eChan,clones) $+ "
+    write inc_irc_chanDB.asp iChan_strictop = " $+ $readchan(%eChan,strictop) $+ "
+    write inc_irc_chanDB.asp iChan_setaccess = " $+ $readchan(%eChan,setaccess) $+ "
+    write inc_irc_chanDB.asp iChan_bantimeout = " $+ $readchan(%eChan,bantimeout) $+ "
+    write inc_irc_chanDB.asp iChan_topicfreq = " $+ $readchan(%eChan,topicfreq) $+ "
+    write inc_irc_chanDB.asp iChan_spamfilter = " $+ $readchan(%eChan,spamfilter) $+ "
+    write inc_irc_chanDB.asp iChan_sayaccess = " $+ $readchan(%eChan,sayaccess) $+ "
+    write inc_irc_chanDB.asp iChan_capkick = " $+ $readchan(%eChan,capkick) $+ "
+    write inc_irc_chanDB.asp iChan_loging = " $+ $readchan(%eChan,loging) $+ "
+    write inc_irc_chanDB.asp iChan_noexpire = " $+ $readchan(%eChan,noexpire) $+ "
+    write inc_irc_chanDB.asp iChan_url = " $+ $readchan(%eChan,url) $+ "
+    write inc_irc_chanDB.asp iChan_joinmsg = " $+ $readchan(%eChan,joinmsg) $+ "
+    if ($ini(data\activechans.db,%eChan,0)) {
+      write inc_irc_chanDB.asp iChan_onlineusers = " $+ $ini(data\activechans.db,%eChan,0) $+ "
+    }
+    else {
+      write inc_irc_chanDB.asp iChan_onlineusers = "0"
+    }
+    write inc_irc_chanDB.asp iChan_topic = " $+ $remove($read(data/channel_topics.txt, s, %eChan $+ :),$3 $+ :) $+ "
+    var %xtc2 1
+    var %xchans
+    while ($ini(data/activechans.db,%eChan,%xtc2)) {
+      var %xchans %xchans $+ $ini(data/activechans.db,%eChan,%xtc2) $+ $chr(44)
+      inc %xtc2
+    }
+    write inc_irc_chanDB.asp iChan_usersonline = " $+ %xchans $+ "
+    var %xtc3 = 1
+    var %chans
+    while ($ini(data/access/level.db,%xtc3)) {
+      if ($axs.levels.name($readaccess($ini(data/access/level.db,%xtc3),%eChan,level)) == Co-Owner) {
+        var %chans %chans $+ $ini(data/access/level.db,%xtc3) $+ $chr(44)
+      }
+      inc %xtc3
+    }
+    write inc_irc_chanDB.asp iChan_coowners = " $+ %chans $+ "
+    inc %x
+  }
+
+  write inc_irc_chanDB.asp end select
+  write inc_irc_chanDB.asp $chr(37) $+ $chr(62)
+  copy -o inc_irc_chanDB.asp $netconf(system,webfolder)
+}
+
+alias web_pending {
+  remove inc_irc_pending.asp
+  write inc_irc_pending.asp $chr(60) $+ $chr(37)
+  write inc_irc_pending.asp if request("item") <> "" then
+  write inc_irc_pending.asp select case request("item")
+  var %x 1
+  while ($ini(data\web_pending.db,%x)) {
+    write inc_irc_pending.asp case " $+ $ini(data\web_pending.db,%x) $+ "
+    write inc_irc_pending.asp writeToSysOp " $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),action) $+ ", $+ $ini(data\web_pending.db,%x)
+    write inc_irc_pending.asp errmsg = " $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),reply) $+ "
+    if (web.editemail* iswm $readini(data\web_pending.db,$ini(data\web_pending.db,%x),action)) {
+      write inc_irc_pending.asp sql = "UPDATE PORTAL_MEMBERS SET M_EMAIL = ' $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),newmail) $+ ' WHERE M_NAME = ' $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),user) $+ '"
+      write inc_irc_pending.asp executeThis(sql)
+    }
+    if (newQuote* iswm $readini(data\web_pending.db,$ini(data\web_pending.db,%x),func)) {
+      write inc_irc_pending.asp writeToQDB " $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),user) $+ ", " $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),channel) $+ ", " $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),quote) $+ "
+      write inc_irc_pending.asp writeToSysOp "delpending $ini(data\web_pending.db,%x) $+ ", $+ $calc($ini(data\web_pending.db,%x) + 1) 
+      write inc_irc_pending.asp response.redirect("qdb.asp")
+    }
+
+    inc %x
+  }
+  write inc_irc_pending.asp case else
+  write inc_irc_pending.asp errmsg = "No such pending item exists!"
+  write inc_irc_pending.asp end select
+  write inc_irc_pending.asp end if
+  write inc_irc_pending.asp $chr(37) $+ $chr(62)
+  copy -o inc_irc_pending.asp $netconf(system,webfolder)
+}
+
+alias qdb_pending {
+  remove inc_qdb_sync.asp
+  write inc_qdb_sync.asp $chr(60) $+ $chr(37)
+  var %x 1
+  while ($ini(data\web_pending.db,%x)) {
+    if (newQuote* iswm $readini(data\web_pending.db,$ini(data\web_pending.db,%x),func)) {
+      write inc_qdb_sync.asp writeToQDB " $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),user) $+ ", " $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),channel) $+ ", " $+ $readini(data\web_pending.db,$ini(data\web_pending.db,%x),quote) $+ ", " $+ $ini(data\web_pending.db,%x) $+ "
+    }
+
+    inc %x
+  }
+  write inc_qdb_sync.asp $chr(37) $+ $chr(62)
+  copy -o inc_qdb_sync.asp $netconf(system,webfolder)
+}
+
+alias web_db {
+  remove inc_irc_db.asp
+  write inc_irc_db.asp $chr(60) $+ $chr(37)
+  write inc_irc_db.asp select case lcase(strDBNTUserName)
+  var %x 1
+  while ($ini(data\nicknames.db,%x)) {
+    write inc_irc_db.asp case " $+ $lower($ini(data\nicknames.db,%x)) $+ "
+    write inc_irc_db.asp sysop_email = " $+ $readnick($ini(data\nicknames.db,%x),email) $+ "
+    write inc_irc_db.asp sysop_password = " $+ $decode($readnick($ini(data\nicknames.db,%x),password),m) $+ "
+    write inc_irc_db.asp sysop_showemail = " $+ $readnick($ini(data\nicknames.db,%x),showemail) $+ "
+    write inc_irc_db.asp sysop_autoop = " $+ $readnick($ini(data\nicknames.db,%x),autoop) $+ "
+    write inc_irc_db.asp sysop_status = " $+ $readnick($ini(data\nicknames.db,%x),status) $+ "
+    write inc_irc_db.asp sysop_operlevel = " $+ $readnick($ini(data\nicknames.db,%x),operlevel) $+ "
+    write inc_irc_db.asp sysop_lasthost = " $+ $readnick($ini(data\nicknames.db,%x),lasthost) $+ "
+    write inc_irc_db.asp sysop_lastlogin = " $+ $asctime($readnick($ini(data\nicknames.db,%x),lastlogin)) $+ "
+    write inc_irc_db.asp sysop_vhost = " $+ $readnick($ini(data\nicknames.db,%x),vhost) $+ "
+    write inc_irc_db.asp sysop_noexpire = " $+ $readnick($ini(data\nicknames.db,%x),noexpire) $+ "
+
+    write inc_irc_db.asp sysop_protect = " $+ $readnick($ini(data\nicknames.db,%x),protect) $+ "
+    write inc_irc_db.asp sysop_accessalert = " $+ $readnick($ini(data\nicknames.db,%x),accessalert) $+ "
+    write inc_irc_db.asp sysop_protectaction = " $+ $readnick($ini(data\nicknames.db,%x),protectaction) $+ "
+    write inc_irc_db.asp sysop_notesystem = " $+ $readnick($ini(data\nicknames.db,%x),notesystem) $+ "
+    write inc_irc_db.asp sysop_lang = " $+ $readnick($ini(data\nicknames.db,%x),lang) $+ "
+    write inc_irc_db.asp sysop_notealert = " $+ $readnick($ini(data\nicknames.db,%x),notealert) $+ "
+
+    write inc_irc_db.asp sysop_reg = true
+    %nick = $ini(data\nicknames.db,%x)
+    write inc_irc_db.asp sysop_notes = " $+ $ini(data/notes.db,%nick,0) $+ "
+
+    var %x2 1
+    var %chans
+    while ($ini(data/channels.db,%x2)) {
+      if ($readaccess($ini(data\nicknames.db,%x),$ini(data/channels.db,%x2),level) == 5) {
+        var %chans %chans $+ $ini(data/channels.db,%x2)  $+ $chr(44) 
+      }
+      inc %x2
+    }
+    write inc_irc_db.asp sysop_chanaccess = " $+ %chans $+ "
+    write inc_irc_db.asp $chr(32)
+    inc %x
+  }
+  write inc_irc_db.asp case else
+  write inc_irc_db.asp sysop_reg = false  
+  write inc_irc_db.asp end select
+  write inc_irc_db.asp $chr(37) $+ $chr(62)
+  copy -o inc_irc_db.asp $netconf(system,webfolder)
+}
+alias web_actions {
+  var %x 1
+  while ($findfile(web_actions,web_*,%x)) {
+    if (pass isin $read($findfile(web_actions,web_*,%x),1)) {
+      report Web Action: (digi-net.org) Password change in progress...
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (addnick isin $read($findfile(web_actions,web_*,%x),1)) {
+      report Web Action: (digi-net.org) Account change in progress...
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (web.shout isin $read($findfile(web_actions,web_*,%x),1)) {
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (web_chanset isin $read($findfile(web_actions,web_*,%x),1)) {
+      report Web Action: (digi-net.org) Channel SET in progress...
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web
+      return
+    }
+    if (nickreg isin $read($findfile(web_actions,web_*,%x),1)) {
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      return
+    }
+    if (web.pending isin $read($findfile(web_actions,web_*,%x),1)) {
+      .web_pending
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (qdb.done isin $read($findfile(web_actions,web_*,%x),1)) {
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (report isin $read($findfile(web_actions,web_*,%x),1)) {
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (web_asetSQL isin $read($findfile(web_actions,web_*,%x),1)) {
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (web_syncnick isin $read($findfile(web_actions,web_*,%x),1)) {
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (editemail isin $read($findfile(web_actions,web_*,%x),1)) {
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    if (TACtivate isin $read($findfile(web_actions,web_*,%x),1)) {
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web -a
+      return
+    }
+    else {    
+      report Web Action: (digi-net.org) $read($findfile(web_actions,web_*,%x),1)
+      $read($findfile(web_actions,web_*,%x),1)
+      remove $findfile(web_actions,web_*,%x)
+      .do_web
+      return
+    }
+    inc %x
+  }
+}
+alias web.passchange {
+  if ($readnick($1,nickname)) && ($readnick($1,password) === $encode($2,m)) {
+    addnick $1 password $encode($3,m)
+    report Web Action: Password change complete for $1
+    return
+  }
+  report Web Action: Password change failed for $1
+  return
+}
+alias web.editemail {
+  remini data\web_pending.db $1
+  addnick $2 email $3
+  remini data/nicknames.db $2 newemail
+  remini data/nicknames.db $2 tac
+  addnick $2 tac 0
+  report Web Action: Email change complete for $2
+  web_pending
+  .do_web -a
+}
+alias web.nickreg {
+  if (!$readnick($lower($1),nickname)) {
+    addnick $lower($1) tac $rand(1,999999999999)
+    addnick $lower($1) aic $rand(1,999999999999)
+    addnick $lower($1) email $3
+    addnick $lower($1) password $encode($2,m)
+    addnick $lower($1) showemail off
+    addnick $lower($1) autoop on
+    addnick $lower($1) status locked
+    addnick $lower($1) operlevel 0
+    addnick $lower($1) protect off
+    addnick $lower($1) accessalert off
+    addnick $lower($1) protectaction warn
+    addnick $lower($1) vhost $lower($lower($1)) $+ .users.digi-net.org
+    addnick $lower($1) notesystem on
+    addnick $lower($1) lang en
+    addnick $lower($1) lastlogin $ctime
+    addnick $lower($1) noexpire off
+    addnick $lower($1) notealert on
+    addnick $lower($1) nickmodes rwx
+    if ($netconf(system,pmquota) < 1) { addnick $lower($1) pmquota 15 }
+    else { addnick $lower($1) pmquota $netconf(system,pmquota) }
+    writeini data/nicknames.db $lower($1) status active
+    remini data/nicknames.db $lower($1) tac
+    writeini data/nicknames.db $lower($1)  lastlogin $ctime
+    addnick $lower($1) nickname $lower($1)
+    report Web Action: $1 registered by web automation
+    if ($netconf(system,loging) == on) { 
+      writetolog system $lower($1) activated there account with the correct TAC
+    }
+    .do_web -a
+  }
+
+}
+alias web.TACtivate {
+  remini data\web_pending.db $1
+  delpending $2 tac
+  if ($ini(data/pending.db,$2,0) < 1) { remini data/pending.db $2 }
+  writeini data/nicknames.db $2 status active
+  remini data/nicknames.db $2 tac
+  writeini data/nicknames.db $2 lastlogin $ctime
+  addnick $2 nickname $2
+  report Account Activated TAC: from $2
+  if ($netconf(system,loging) == on) { 
+    writetolog system $2 activated there account with the correct TAC via web
+  }
+
+}
+alias web_asetSQL {
+  remove inc_irc_sql.asp
+  var %x 1
+  write inc_irc_sql.asp $chr(60) $+ $chr(37)
+  while ($ini(data/nicknames.db,%x)) {
+    if ($readnick($ini(data/nicknames.db,%x),status) == active) {
+      write inc_irc_sql.asp sql = "UPDATE IRC_ASET SET irc_password = ' $+ $decode($readnick($ini(data/nicknames.db,%x),password),m) $+ ', irc_showemail = ' $+ $readnick($ini(data/nicknames.db,%x),showemail) $+ ', "
+      write inc_irc_sql.asp sql = sql & "irc_autoop = ' $+ $readnick($ini(data/nicknames.db,%x),autoop) $+ ', irc_operlevel = ' $+ $readnick($ini(data/nicknames.db,%x),operlevel) $+ '"
+      write inc_irc_sql.asp sql = sql & ", irc_protect = ' $+ $readnick($ini(data/nicknames.db,%x),protect) $+ ', irc_accessalert = ' $+ $readnick($ini(data/nicknames.db,%x),accessalert) $+ ', irc_notesystem = ' $+ $readnick($ini(data/nicknames.db,%x),notesystem) $+ ', irc_lang = ' $+ $readnick($ini(data/nicknames.db,%x),lang) $+ ', irc_pmquota = ' $+ $readnick($ini(data/nicknames.db,%x),pmquota) $+ '"
+      write inc_irc_sql.asp sql = sql & ", irc_lastlogin = ' $+ $asctime($readnick($ini(data/nicknames.db,%x),lastlogin)) $+ ', irc_noexpire = ' $+ $readnick($ini(data/nicknames.db,%x),noexpire) $+ ', irc_vhostactive = ' $+ $readnick($ini(data/nicknames.db,%x),vhostactive) $+ ', irc_notealert = ' $+ $readnick($ini(data/nicknames.db,%x),notealert) $+ ', irc_nickmodes = ' $+ $readnick($ini(data/nicknames.db,%x),nickmodes) $+ '"
+      write inc_irc_sql.asp sql = sql & ", irc_email = ' $+ $readnick($ini(data/nicknames.db,%x),email) $+ ', irc_lasthost = ' $+ $readnick($ini(data/nicknames.db,%x),lasthost) $+ ', irc_status = ' $+ $readnick($ini(data/nicknames.db,%x),status) $+ ', irc_vhost = ' $+ $readnick($ini(data/nicknames.db,%x),vhost) $+ '"
+      write inc_irc_sql.asp sql = sql & ", irc_protectaction = ' $+ $readnick($ini(data/nicknames.db,%x),protectaction) $+ '"     
+      write inc_irc_sql.asp sql = sql & ", irc_updated = '" & strCurDateString & "'"
+      var %x2 1
+      var %chans
+      while ($ini(data/channels.db,%x2)) {
+        if ($readaccess($ini(data\nicknames.db,%x),$ini(data/channels.db,%x2),level) >= 4) {
+          var %chans %chans $+ $ini(data/channels.db,%x2)  $+ $chr(44) 
+        }
+        inc %x2
+      }
+      write inc_irc_sql.asp sql = sql & ", channel_access = ' $+ %chans $+ '"
+      write inc_irc_sql.asp sql = sql & " WHERE irc_nickname = ' $+ $readnick($ini(data/nicknames.db,%x),nickname) $+ '"
+      write inc_irc_sql.asp executeThis(sql)
+    }
+    inc %x
+  }
+  write inc_irc_sql.asp $chr(37) $+ $chr(62)
+  copy -o inc_irc_sql.asp $netconf(system,webfolder)
+}
+
+alias web_runonce {
+  remove inc_irc_runat.asp
+  var %x 1
+  write inc_irc_runat.asp $chr(60) $+ $chr(37)
+  while ($ini(data/nicknames.db,%x)) {
+    if ($readnick($ini(data/nicknames.db,%x),status) == active) {
+      write inc_irc_runat.asp sql = "INSERT INTO IRC_ASET (nickname) values (' $+ $readnick($ini(data/nicknames.db,%x),nickname) $+ ')"
+      write inc_irc_runat.asp executeThis(sql)
+    }
+    inc %x
+  }
+  write inc_irc_runat.asp $chr(37) $+ $chr(62)
+  copy -o inc_irc_runat.asp $netconf(system,webfolder)
+}
+
+alias do_web {
+  if ($netconf(system,webportal) == on) {
+    ;web_db
+    web_livestats
+    web_chanselect
+    web_Chanlist
+    web_chanDB
+    web_pending
+    if ($1 == -a) {
+      web_asetSQL
+    }
+  }
+}
+alias web_chanusers {
+  var %x 1
+  while ($ini(data/activechans.db,%x)) {
+    echo -a >> $ini(data/activechans.db,%x)
+    var %x2 1
+    while ($ini(data/activechans.db,%x,%x2)) {
+      echo -a >>> $ini(data/activechans.db,%x,%x2)
+      inc %x2
+    }
+    inc %x
+  }
+
+}
+alias web_chanset {
+  if ($2 == noexpire) {
+    addchan $1 noexpire $3
+  }
+  if ($2 == autoop) {
+    addchan $1 autoop $3
+  }
+  if ($2 == topic) {
+    .sockwrite -tn serv $+(:,$netconf(system,nickname)) TOPIC $1 $netconf(system,nickname) $ctime : $+ $3-
+    .removeLIVEtopic $1
+    writeLIVEtopic $1 $3-
+  }
+  if ($2 == inchan) {
+    if ($3 == off) {
+      addchan $1 inchan off
+      syspartchan $1
+    }
+    else {
+      addchan $1 inchan on
+
+      if (!$readchan($1,suspended)) {
+        .sockwrite -tn serv $+(:,$netconf(system,nickname)) MODE $1 $iif($readchan($1,modes),$ifmatch,+nt)
+        .sockwrite -tn serv $+(:,$netconf(system,nickname)) TOPIC $1 $netconf(system,nickname) $ctime : $+ $remove($read(data/set_topics.txt, s, $1 $+ :),$1 $+ :)
+        .removeLIVEtopic $1
+        writeLIVEtopic $1 $remove($read(data/set_topics.txt, s, $1 $+ :),$1 $+ :)
+      }
+
+      if ($readchan($1,inchan) == on) && (!$readchan($1,suspended)) { 
+        .sockwrite -tn serv $+(:,$netconf(system,nickname)) JOIN $1
+        .sockwrite -tn serv $+(:,$netconf(server,server)) MODE $1 +o $netconf(system,nickname)
+      }
+
+    }
+  }
+  ;end of function
+}
+alias web_newvhost {
+  addnick $1 newvhost $lower($2)
+  addnick $1 vhostactive no
+  writepending $1 vhost $readnick($1,newvhost)
+  report Web Action: Pending VHOST for $1 /msg $netconf(system,nickname) PENDING
+}
+alias web_syncnick {
+  addnick $1 email $2
+  addnick $1 nickmodes $3
+  addnick $1 showemail $4
+  addnick $1 autoop $5
+  addnick $1 status $6
+  addnick $1 operlevel $7
+  addnick $1 protect $8
+  addnick $1 protectaction $9
+  addnick $1 accessalert $10
+  addnick $1 lasthost $11
+  addnick $1 vhost $12
+  addnick $1 vhostactive $13
+  addnick $1 notesystem $14
+  addnick $1 notealert $15
+  addnick $1 pmquota $16
+  addnick $1 lastlogin $ctime($18-)
+  addnick $1 noexpire $17
+  report Sync'd $1 account with web SQL DB
+
+}
+alias sysop.quote2web {
+  if (!$addy($1)) { 
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  $lang($1,channel,2)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $lang($1,channel,3)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    halt
+  }
+  if (!$2) {
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  $lang($1,channel,1)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color Channel name required
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    halt
+  }
+  if (!$readchan($2,channel)) {
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  $lang($1,channel,1)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color Channel $2 is not registered
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color For help regarding registration /msg $netconf(system,nickname) HELP CHANREG
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    halt
+  }
+  if ($readchan($2,suspended)) {
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  $lang($1,channel,1)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $2 is currently suspended by admin, 
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  Reason: $readchan($2,suspended)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    halt
+  }
+  if (!$readaccess($addy($1),$2,level)) && (!$readadmin($1,nickname)) {
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  $lang($1,channel,2)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $lang($1,channel,4)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    halt
+  } 
+  if ($readaccess($addy($1),$2,level) < $readchan($2,quoteaccess)) && (!$readadmin($1,nickname)) {
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  $lang($1,channel,2)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $lang($1,channel,4).
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    halt
+  }
+  if ($readnick($1,operlevel) < $netconf(chanlevel,adminsay)) && ($readadmin($1,nickname)) {
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  $lang($1,channel,2)
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $lang($1,channel,4).
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    halt
+  } 
+  if (!$3) {
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  Incorrect usage
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color Try /msg SysOp QUOTE <#channel> <message>
+    sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+    halt
+  }
+  var %x $rand(8,999999) $+ $ctime
+  writeini data/web_pending.db %x user $lower($1)
+  writeini data/web_pending.db %x action web.pending_sync
+  writeini data/web_pending.db %x func newQuote
+  writeini data/web_pending.db %x channel $2
+  writeini data/web_pending.db %x quote $3-
+  writeini data/web_pending.db %x reply Thank You, Your Quote Was Added To Our Database
+  .qdb_pending
+  sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+  sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $+  New Quote Added
+  sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color Your New Quote Has Been Added To Our Website
+  sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color You Can View Your Quote Online At
+  sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 : $+ %color $netconf(system,weblink) $+ qdb.asp
+  sockwrite -tn serv $+(:,$netconf(system,nickname)) NOTICE $1 :-
+
+}

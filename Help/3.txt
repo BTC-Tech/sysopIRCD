@@ -1,0 +1,13 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Help & Information - Registering Channels
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp can protect and serve your registered channels 24/7
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. When a channel is registered SysOp will remain in the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. unless it is suspended or removed.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You can add users to your channel user lists and award them certain
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. privilages such as operators and managers.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. All channel settings can be edited by the owner and co-owners
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp CHANREG <#channel>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. <> are not required they are simply for demonstration.
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

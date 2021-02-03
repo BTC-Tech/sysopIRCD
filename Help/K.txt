@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - KICK
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. KICK can be used by anyone on the channel access list
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. but you cannot kick a user with higher access
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. than yourself. Kick is also known a K
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .K <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Private: /msg SysOp KICK <#channel> <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

@@ -1,0 +1,21 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Please select an area of help from the list below.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. To view the contents simply type HELP followed by the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. desired topic e.g HELP 1 to register an account or
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. HELP 6 to manage your account.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You may also use the command to view information about it
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. /msg Sysop HELP NICKREG
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp HELP <topic|command>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Listing All Available Topics >
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 1- How to register and protect your nickname
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 2- How to login and identify to SysOp
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 3- How to register and open a channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 4- How to edit your channel settings
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 5- How to use IRCop features
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 6- How To change your nickname settings
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 7- How To add/remove channel users and friends
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 8- How To add/remove channel bans and kick users
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

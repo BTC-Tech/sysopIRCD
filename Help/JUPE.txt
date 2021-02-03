@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - JUPE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. JUPE will create a dummy server linked to the services server,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. this is usefull if you need to temp stop a server connecting etc.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCOp with level  $+ $netconf(opercmds,jupe) $+  to use this command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp JUPE <servername.domain.tld>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

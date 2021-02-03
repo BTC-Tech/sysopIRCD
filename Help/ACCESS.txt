@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - ACCESS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Access to this command depends on the general settings
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. of SysOp. ACCESS displays the users access level in the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. channel the command was triggered in.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .ACCESS <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

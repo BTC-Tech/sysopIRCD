@@ -1,0 +1,12 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CHANNELBLACKLIST
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. An IRC operator function to blacklist channel names
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. or names matching a wildcard text. Anyone attempting
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to join a blacklisted channel will be kickbanned and
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. the service will join the channel to enforce it. You
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. may set the time to expire 1w, 1d, 1h, 1d or NEVER
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) CHANNELBLACKLIST <*channel*> <expiretime> <reason>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To List: /msg $netconf(system,nickname) CHANNELBLACKLIST LIST
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Remove: /msg $netconf(system,nickname) CHANNELBLACKLIST REMOVE <*channel*>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

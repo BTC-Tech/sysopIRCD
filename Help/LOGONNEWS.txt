@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - LOGONNEWS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Messages in LOGONNEWS will be displayed to every
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. user when they use the IDENTIFY command. You must
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. be an IRCOp with level  $+ $netconf(opercmds,news) $+  to use this command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp LOGONNEWS <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

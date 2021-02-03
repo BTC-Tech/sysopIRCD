@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - AOP
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. AOP (auto op) when on will auto op you
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. according to your access level in that channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. whenever you are logged in and join the channel.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SET AUTOOP can disable this feature if turned off.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp USET #CHANNEL AOP on/off
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

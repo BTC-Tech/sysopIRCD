@@ -1,0 +1,14 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Help & Information - Registering Nickname
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. We always advise people to register a nickname account on IRC
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. this ensures the highest level of security for everyone.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. When you are using a registered nickname you will have access to 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. many of the services features such as creating your own channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. sending notes to other registered users and the ability to join
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. other channels user lists.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp NICKREG <password> <email>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Please note a valid email address may be required.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. <> are not required they are simply for demonstration.
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

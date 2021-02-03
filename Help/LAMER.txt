@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - LAMER
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Channel lamer's are auto kicked from the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. and banned so they cannot rejoin the channel.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You may also use the ADDUSER command to add Lamers.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .LAMER <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

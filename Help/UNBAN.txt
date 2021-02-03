@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - UNBAN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. UNBAN can be used by anyone on the channel access list
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to remove a channel ban on the channel.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .unban <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Private: /msg SysOp UNBAN <#channel> <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - GLOBALNOTICE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. GLOBALNOTICE is used to send a global notice
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to all clients connected to the IRC network.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must at least level  $+ $readcmd(globalnotice,level) $+  to use this command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to use the GLOBALNOTICE command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp GLOBALNOTICE <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

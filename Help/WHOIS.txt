@@ -1,0 +1,7 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - WHOIS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. WHOIS shows you saved information on a client
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. connected to the network, they must be online.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCop with level  $+ $netconf(opercmds,whois)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: .WHOIS <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

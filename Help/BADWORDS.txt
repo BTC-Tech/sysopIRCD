@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - BADWORDS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BADWORDS is used by IRC operators to either list
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. badwords or add new words to the system.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. BADWORDS on its own will list all the current words.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCOp with at least level  $+ $netconf(opercmds,badwords)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .BADWORDS [add] [word]
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

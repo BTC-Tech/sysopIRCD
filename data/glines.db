@@ -1,0 +1,24 @@
+[1]
+address=c*h*a*n*s*e*r*v
+by=Borderlad
+time=1208907000
+expire=never
+expiretime=0
+type=NICKBAN
+reason=Reserved For Services
+[2]
+address=*.noos.fr
+by=Borderlad
+time=1209945107
+expire=never
+expiretime=0
+type=AKILL
+reason=No unauthorized bots on our network
+[3]
+address=numericable.fr
+by=Borderlad
+time=1218885878
+expire=never
+expiretime=0
+type=AKILL
+reason=Bots#

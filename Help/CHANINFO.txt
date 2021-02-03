@@ -1,0 +1,7 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CHANINFO
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This command can only be used in a registered channel,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. however anyone can use it. This will display certain info
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. about a channel such is the registrar and date it was created.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: .CHANINFO
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

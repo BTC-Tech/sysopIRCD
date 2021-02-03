@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - ACCOUNT
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Account on its own will show you all available information
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. about your own nickname registration and account.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. IRCOPS may add a nickname to view account information.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp ACCOUNT [nickname]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .MYACCOUNT
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

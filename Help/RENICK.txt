@@ -1,0 +1,7 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - RENICK
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. RENICK allows you to forcefully change a users
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. nickname providing they are online.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must have at least level  $+ $readcmd(renick,level) $+  to use this command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp RENICK <nickname> <newnick>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

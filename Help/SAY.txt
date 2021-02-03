@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - SAY
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Using SAY will have SysOp say whatever message
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you specify in the channel you specify. You can only
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. use say per channel at a time.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) SAY <#channel> <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

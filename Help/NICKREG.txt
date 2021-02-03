@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - NICKREG
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Allows you to register a nickname and stop other users
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. from being able to use it. Once registered you must login
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. each time you connect to the network. You must have a registered
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. nickname to use features such as channel registration, you must
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. also provide a vaild email address too.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp NICKREG <password> <emailaddress>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

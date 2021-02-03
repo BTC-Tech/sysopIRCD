@@ -1,0 +1,23 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - ASET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. ASET allows you to edit certain default settings with your
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. registered nickname account, such as autoop and protect.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp can protect your nickname if anyone else uses it
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. and doesnt IDENTIFY within 60 second for example.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Valid ASET options are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12autoop <on/off> - When added to a channel user list, should you get auttop?
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12Notes <on/off> - Enable or disable notes on your account.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12showemail <on/off> - Show all users your email address if they request it?
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12protect <on/off> - Should SysOp protect your nick if its used by somone else?
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12action <off/warn/renick> - What SysOp will do if somone uses your nickname.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12vhost <virtual host> - Changes your vhost, must be approved by an IRCop.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12lang <extension> - Changes the language of the service, default is en
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12accessalerts <on/off> - Recieve notes when added to a channel access list.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12notealerts <on/off> - Receive email notification when you get a new note.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Warn will simply send the user a warning message
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. renick will change there nickname if they do not IDENTIFY within 60 seconds
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp ASET <option> <value>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

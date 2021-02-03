@@ -1,0 +1,132 @@
+[language]
+name=English
+
+[nickname]
+1=Sorry Nickname Taken
+2=Access Denied
+3=Already Logged In
+4=You are already IDENTIFIED as
+5=To Logout Simply Reconnect To IRC
+6=Nickname Registered
+7=The nickname
+8=is registered to another user
+9=If this is your nickname please IDENTIFY
+10=Type /msg $netconf(system,nickname) IDENTIFY [your password]
+accountnowactive=Thank You, Your account is now set up and fully active.
+logincomplete=Login Complete
+logincomplete2=You are now logged into $netconf(system,nickname)
+accnewpass=Password Changed
+newpassnow=Your new password is now
+
+[oper]
+2=Access Denied
+sll=System Logs
+sllt= End Of System Logs
+
+[channel]
+1=Incorrect Channel Name
+2=Access Denied
+3=Please IDENTIFY to use this command
+4=Not Enough Access To Use This Command
+5=Command Not Required
+notreg=Sorry that channel is not registered
+drop=Channel Drop Complete
+drop2=is now removed from registration
+chanreg1=Channel Registrations Disabled
+chanreg2=Please asl an IRCop to register channels for you.
+noreg2=Sorry you have registered the maximum amount of channels allowed
+userlist=User List And Access Levels
+enduserlist=End Of User List
+cll=Channel Log Listing
+cllt=Displaying Channel Logs For
+nospamkick=No Spamming In $3 please.
+nospamlog=Triggered a spamming kick
+capkicklog=Triggered an excessive cap kick
+swearkicklog=Triggered a swearing kick
+
+[levels]
+Owner=Owner
+Co-Owner=Co-Owner
+Operator=Operator
+Friend=Friend
+Lamer=Lamer
+
+[access]
+title=Unauthorized Access
+msg=Sorry you do not have access to this function
+
+[errors]
+missinginfo=Missing Information
+missingtac=Sorry you didnt enter the TAC activation code
+nonickreg=NickReg Disabled
+nonickreg2=No new nicknames are allowed at this time.
+emailandpass=Please specify an email address and password
+nickregtaken= is already registered to another user
+access=Access Denied
+noname=Sorry that user is not a registered nickname
+nocommandTitle=No Such Command
+nocommand=Cannot find a private command matching your request
+nocommandFooter=Try /msg $netconf(system,nickname) Help
+alreadyactive=You have already activated this account
+invalidemailcode=Sorry that is not the correct code that was emailed to you
+badinfotitle=Incorrect Information
+safemodenologin=Services In Safe Mode
+safemodenologin2=Sorry services are in safe mode, function disabled
+noreglogin=Nickname Not Registered
+noreglogin2=Sorry nickname  $+ $1 $+  is not registered.
+noreglogin21=Sorry nickname  $+ $2 $+  is not registered.
+nopassinc=Please enter a password to continue.
+acclock=Account Locked
+acclock2=Account Locked, Please see an IRC Operator
+failedlogin3=You've failed login 3 times. Your account is now locked
+failedlogin=Try FORGOTPASS after your account is unlocked
+wrongpass=Password Failed
+wrongpass2=Sorry that was not the correct password
+wrongpass3=Passwords are CaSe SeNsAtIvE
+passreq=Old and New password required
+missinnande=Nickname and email address required
+invalidemail=Invalid Email
+invemail=Sorry that is not the correct email address
+passsent=Password Send
+passsent2=Your password was sent to
+pandereq=Password and new email address required
+noitm=Sorry, Item [x] not found!
+minfo=[x] is required for this command.
+
+[misc]
+cmdcomplete=Command Complete
+try=Try
+[seen]
+title=Seen Information
+error1=Please specify a nickname to search for
+notseen=is not in my seen records yet!
+wasseen=was last seen
+
+[ircops]
+title=Currently Online
+line1=Currently Showing
+line1a=IRCop(s) Online!
+bl=IRC Operator Status Blacklisted
+blnotice=Sorry network admin have suspended your IRCop access!
+operup=IRC Operator Status
+operupnotice=You are now identified as a
+pending=There are  $+ $ini(data/pending.db,0) $+  pending IRCop Items
+opnewsdel=News item  $+ %n $+  was removed.
+opnewsdisp=Displaying News
+opnewsadd=News Item  $+ [x] $+  added.
+chansendall=Sending Channel Notice To All Channels
+[note]
+errortitle=Error Using NOTE system
+na=Sorry, You are not allowed to use NOTE at this time.
+mi=Missing information required for the NOTE command,
+nsts=Sorry, you cannot send yourself NOTE's
+natr=is not allowed to receive NOTE's at this time
+dns=have disabled there note system.
+full=Sorry, that users inbox is full, they cannot receive any more notes.
+sent=Your message was saved for the user
+
+[help]
+1=For more help see -
+2=Cannot Find Help Topic
+3=Cannot find the topic you requested.
+4=Try /msg SysOp HELP on its own.

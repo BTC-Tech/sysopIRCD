@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - OPERNEWS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Messages in OPERNEWS will be displayed to every
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. IRCop when they use the /oper command or login. You must
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. have accesslevel  $+ $readcmd(opernews,level) $+  to use this command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp OPERNEWS <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

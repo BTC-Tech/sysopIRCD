@@ -1,0 +1,39 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - XSET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. XSET is a powerfull tool used for IRC operators
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to manage the service settings for SysOp
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCop level  $+ $netconf(opercmds,xset) $+  to view or change XSET.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Available Server Settings:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. server - The server name for the Services
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. domain - The servers domain name for the services
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. ip - The IP address on which to link to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. port - The port to use when linking
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: XSET SERVER <option> <value>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Example: XSET SERVER PORT 6667 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Available System settings: 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. nickname - The nickname of the default service
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. mainchan - The networks main channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. report - The channel SysOp will report logs too
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. helpchan - The Channels IRCops must be in when available for help
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. nickreg - [on/off] Turn on and off nickname registrations
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. chanreg - [on/off] Turn on and off channel registratrions 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.Note: (IRCops can always register)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. maxchans - The maximum registered channels per account
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. safemode - [on/off] Enable safemode service and disallow new reigstrations etc
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. uniqueemail - [on/off] When "on" users cannot use the same email twice to register.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. pmquota - Default NOTE quota for new users
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. loging - [on/off] Log certain network events
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. chanexpire - [1w/7d] Channels will expire after, 1w or 7d
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.Note: (you may choose your own timeframe to expire 21d or 2w)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. nickexpire - [1w/7d] Nicknames will expire after, 1w or 7d
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.Note: (you may choose your own timeframe to expire 21d or 2w)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. dailytasks - [00:00:00] time to perform daily tasks
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. dailybackups - [on/off] Backup databases during daily tasks
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. connectnotices - [on/off] Report connects and quits to the report channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. administrator - [nickname] Must be a registered nickname
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.Note: (this nickname will be used to send log reports too etc.)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: XSET SYSTEM <option> <value>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Example: XSET SYSTEM chanreg on
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

@@ -1,0 +1,7 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - JOINCHAN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This command is used for IRC operators to have
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp join a channel but not register it.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Access is controlled by the MODCMD feature
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: .JOINCHAN <#channel>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

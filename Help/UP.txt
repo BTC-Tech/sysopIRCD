@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - UP
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. UP can be used when you are in a channel that you
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. have at least Friend Access too. The UP command
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. will set the correct modes on you according to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. your channel access example operators get +o on UP
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .UP
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

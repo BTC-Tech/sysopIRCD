@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - IDENTIFY
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. IDENTIFY is used to let users login to there nickname
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. account, Passwords are CaSe SeNsItIvE.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be using the nickname you wish to login to.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. use /nick <nickname> to change your nickname
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp IDENTIFY <password>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

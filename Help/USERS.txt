@@ -1,0 +1,10 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - USERS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Providing you have enough access in the channel to use
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. USERS it will display a list of all users with access to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. the given channel as well as there status if there in the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp USERS #channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .USERS
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

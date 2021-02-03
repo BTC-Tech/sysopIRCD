@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - RANDOMNEWS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Messages in RANDOMNEWS will be displayed to every
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. user when they connect to the network. You must
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. have at least access level  $+ $readcmd(randomnews,level) $+  to use this command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp RANDOMNEWS <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

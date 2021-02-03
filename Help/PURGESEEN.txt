@@ -1,0 +1,11 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - PURGESEEN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Any nickname used on IRC is logged in the seen database.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Sometimes the data can get too large and need purged,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. the PURGESEEN will remove any data that does not match a
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. registered nickname and leave all registered nickname data.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCop level  $+ $netconf(opercmds,purgeseen) $+ .
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.How To: /msg $netconf(system,nickname) PURGESEEN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. End of PURGESEEN Help
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

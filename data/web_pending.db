@@ -1,0 +1,26 @@
+[852060556412]
+user=borderlad
+action=web.editemail 852060556412 borderlad slaurie@btconnect.com
+reply=Your new email address is now slaurie@btconnect.com
+newmail=slaurie@btconnect.com
+[251064419747]
+user=syd
+reply=Your SysOp account is now activated with email address null
+action=web.TACtivate 251064419747 syd
+[935950279236]
+user=syd
+reply=Your SysOp account is now activated with email address bad_habit@hotmail.co.uk
+action=web.TACtivate 935950279236 syd
+
+[53820014000]
+user=bigpaul322
+reply=Your SysOp account is now activated with email address <theb1gy1n@hotmail.co.uk>
+action=web.TACtivate 53820014000 bigpaul322
+[825969219208]
+user=paul
+reply=Your SysOp account is now activated with email address theb1gy1n@hotmail.co.uk
+action=web.TACtivate 825969219208 paul
+[90933203698]
+user=paul
+reply=Your SysOp account is now activated with email address theb1gy1m@hotmail.co.uk
+action=web.TACtivate 90933203698 paul

@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - TAC Activation
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. TAC stands for Temp Activation Code, this is sent
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to the user when they first register a nickname
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. sent via EMAIL or private message depending on system settings.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. The command TAC is used to verify the process.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp TAC <activation code>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

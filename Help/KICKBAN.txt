@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - KICKBAN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. KICKBAN can be used by anyone on the channel access list
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. but you cannot kick and ban a user with higher access
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. than yourself. Kickban is also known a Kb
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .Kb <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Private: /msg SysOp KICKBAN <#channel> <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

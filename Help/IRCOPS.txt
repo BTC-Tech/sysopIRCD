@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - IRCOPS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. IRCOPS will display all IRCOPS online if there
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. are any, it will also display if they are in a help channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. and also report there away status if set away.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp IRCOPS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .IRCOPS
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

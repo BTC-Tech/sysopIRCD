@@ -1,0 +1,14 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - NICKBAN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Simillar to a network ban a NICKBAN will check the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. users nickname on connect against the NICKBAN
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. database and if matched will auto kill the user from the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. network with the reason specified. The time frame can
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. be w/d/h/m/s (weeks,days,hours,mins,secs) for example 1w or 7d
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. would ban them for 1 week, 1h would ban them for 1 hour
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. The reason field is optional and may be left blank.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) NICKBAN <nick> <time> <reason>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To List: /msg $netconf(system,nickname) NICKBAN LIST
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Remove: /msg $netconf(system,nickname) NICKBAN REMOVE <ID>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

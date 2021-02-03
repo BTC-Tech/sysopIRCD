@@ -1,0 +1,25 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - OPERASET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OPERASET allows IRCops to edit certain default settings for a
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. registered nickname account, such as autoop and protect.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp can protect the nickname if anyone else uses it
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. and doesnt IDENTIFY within 60 second for example.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Valid OPERASET options are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. autoop <on/off> - When added to a channel user list, should they get auttop?
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. notes <on/off> - Enable or disable note system for a user
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. pmquota <numeric> - Decided how many notes a user can have stored in inbox.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. showemail <on/off> - Show all users there email address if they request it?
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. protect <on/off> - Should SysOp protect there nick if its used by somone else?
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. action <off/warn/renick> - What SysOp will do if somone uses there nickname.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. status <active/locked> - Lock or activate the users account.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. lang <extension> - Sets the users default language default is en
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. accessalerts <on/off> - Should user recive notes when added to an access list?
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. noexpire <on/off> - Should nickname account expire according to XSET settings?
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. notealerts <on/off> - Turn email notifaction for new notes on/off
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Warn will simply send the user a warning message
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. renick will change there nickname if they do not IDENTIFY within 60 seconds
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp OPERASET <option> <value>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

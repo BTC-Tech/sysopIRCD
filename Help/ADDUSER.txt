@@ -1,0 +1,14 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - ADDUSER
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. ADDUSER allows channel users with enough access to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. add other users to the channel access list. You
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. cannot add users with a higher access than your own
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. available access levels you can add are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Owner, Co-Owner, Operator, Friend, Lamer
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Lamer's are auto kicked and banned from the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp ADDUSER #Channel <nickname> <level>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .ADDUSER <nickname> <level> 
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

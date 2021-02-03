@@ -1,0 +1,19 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Help & Information - Channel Settings
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Channel settings are broken down into 2 categories,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SET which is the channels main settings and USET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. which is a users personal settings for that channel. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Both these features depend on your channel access
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Access levels are: Owner, Co-Owner Operator, Friend, Lamer
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. USET Commands And Functions:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. AOP on/off - Allows you to get autop on join
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. VOP on/off - Allows you to get auto voice on join
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. INFO msg/off - Sets an on join message or OFF will delete it
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.Try /msg SysOp HELP SET for more help on channel settings
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Example: /msg SysOp USET #Channel INFO Hello world...
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SET Commands And Functions:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

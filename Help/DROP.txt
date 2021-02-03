@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - DROP
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. DROP is used to delete a channel registration,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. this will remove all its settings and users
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. and allow anyone to then register it again.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be at least a channel  $+ $axs.levels.name($netconf(chanlevel,drop)) $+  to use DROP
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp DROP <#channel>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

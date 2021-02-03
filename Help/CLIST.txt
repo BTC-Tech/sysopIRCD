@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CLIST
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. CLIST will list all online users that match
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. your given wildcard host, this checks against the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. users host, use wildcards such as *.com
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must have IRCop access  $+ $netconf(opercmds,clist) $+  for this command. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. IF you specify a nickname, the request will be sent to that user.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) CLIST <*wildcard*> [nickname]
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

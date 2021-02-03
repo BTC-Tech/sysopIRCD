@@ -1,0 +1,11 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - GLINE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This will gline ban a user from the network instantly
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. with or without a reason if specified and for the given
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. amount of time. Time is in the format 0d0h0m0s
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. For example 1d would ban them for 1 day, 1h would ban for 1 hour
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you must have at least level  $+ $readcmd(gline,level) $+  to use this command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) GLINE <nickname> <time> [reason]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. List All Glines: /msg $netconf(system,nickname) GLINE LIST
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Remove: /msg $netconf(system,nickname) GLINE REMOVE <ID>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

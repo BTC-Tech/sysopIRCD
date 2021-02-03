@@ -1,0 +1,16 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - NOTE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. NOTE allows registered users to send private notes to
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. other registered users via $netconf(system,nickname) $+ .
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You may turn off your notes if you choose via ASET,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. see HELP ASET. Each user is also given a default inbox 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. quota of $netconf(system,pmquota) inbox messages.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Available Note Functions Are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12List - List any notes y6ou have stored
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12Read <id> - Read a certain note matching <id>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12Delete <id> - Delete note matchin <id>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 12Send <nick> <message> - Send a note to another user
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp NOTE <option> <option>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Example: /msg SysOp NOTE SEND Bob Hello Friend How are you?
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

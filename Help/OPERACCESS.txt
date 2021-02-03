@@ -1,0 +1,10 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - OPERACCESS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OPERACCESS is used to edit a users OPER access to the service
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Each IRCop command has a level assigned to it and only users with equal or
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. higher access can use the specific command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCOp with level  $+ $netconf(opercmds,operaccess) $+  to use OPERACCESS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp OPERACCESS <nickname> <0-500>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .OPERACCESS <nickname> <0-500>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

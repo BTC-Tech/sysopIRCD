@@ -1,4 +1,3 @@
-# sysopIRCD
 =-------------------------------------------------------------------=
 Welcome to SysOp IRC Services RC1.1 release.
 WEB: http://www.sysop-services.org

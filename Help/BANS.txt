@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - BANS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. If you have access to ban a user from a channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you will also have access to view the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. ban list, this lists all active bans on that channel.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) BANS #Channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. In Public: .BANS
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

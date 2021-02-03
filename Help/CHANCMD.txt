@@ -1,0 +1,18 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CHANCMD
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. CHANCMD is a powerfull tool used for IRC operators
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to manage the channel commands & settings for SysOp.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must be an IRCop level  $+ $netconf(opercmds,xset) $+  to view or change CHANCMD.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Each Channel command's access can be edited via this command
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. its broken up into LEVELS where LEVEL refers to the level of user,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 0= All Users, 1= Lamers 2= Friends 3= Op 4= Co-Owner 5= Owner
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.How To: CHANCMD <cmd> <levelnumeric>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.Example: /msg $netconf(system,nickname) CHANCMD SEEN 0
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. would mean any user on the channel could use the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. .SEEN command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. End of CHANCMD Help
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

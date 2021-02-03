@@ -1,0 +1,15 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - DELUSER
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Wher a user has been added to the channel access list
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. it may be required to remove them. DELUSER allows users
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. with enough access to remove users of lower access from the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. channel access list.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. available access levels you can remove are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Owner, Co-Owner, Operator, Friend, Lamer
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Lamer's are auto kicked and banned from the channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp DELUSER #Channel <nickname> <level>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .DELUSER <nickname> <level> 
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

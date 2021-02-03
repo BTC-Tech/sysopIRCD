@@ -1,0 +1,12 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - NICKDROP
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This will remove your account fully and
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. cannot be undone by administrations.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This will remove all your data and also
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. delete any registered channels you have.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This will also remove you from any channel
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. lists you may be assoicated to.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must enter your password to complete.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) NICKDROP <password>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

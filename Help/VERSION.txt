@@ -1,0 +1,7 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - VERSION
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Will display the current running version of
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Network Services
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .VERSION
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

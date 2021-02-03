@@ -1,0 +1,18 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CHANLOGS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. If channel settings have loging enabled the service
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. will log certain events on the channel which can be
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. viewed by those with correct channel access. If
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you specify a line number i.e 10 it will display
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. the last 10 records of each log, if not it will
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. list all logs availalbe for that channel, if you
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. specify a date it will display that log with your
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. specified amount of lines.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Items in [] brakets are optional...
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .CHANLOGS [lines] [dd-mm-yyyy]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Private: /msg SysOp CHANLOGS [lines] [dd-mm-yyyy]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Delete All Logs: /msg SysOp CHANLOGS #Channel DELETEALL
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Delete A Log File: /msg SysOp CHANLOGS #Channel DELETE [dd-mm-yyyy]
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

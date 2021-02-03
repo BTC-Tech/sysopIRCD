@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CHANREG
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Allows you to register your channel for easy management.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Once you register a channel you can edit its settings,
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. add operators and managers etc have SysOp protect
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. your channel from unwanted visitors and more
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You can register more than 1 channel under your account.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp CHANREG <#channel>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

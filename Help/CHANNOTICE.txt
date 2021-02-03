@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CHANNOTICE
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. CHANNOTICE is used to send a notice
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to all active channels on the IRC network.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must have at least level  $+ $readcmd(channotice,lvel)
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. to use the CHANNOTICE command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg SysOp CHANNOTICE <message>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

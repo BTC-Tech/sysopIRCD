@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - HLIST
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. HLIST will list all registered users that match
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. your given wildcard host, this checks against the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. users last known host, use wildcards such as *.com
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must have IRCop access  $+ $netconf(opercmds,hlist) $+  for this command. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) HLIST <*wildcard*>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

@@ -1,0 +1,14 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - AKILL
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Simillar to a network ban an AKILL (auto kill) will
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. check the user address on connect against the AKILL
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. database and if matched will kill the user from the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. network with the reason specified. The time frame can
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. be w/d/h/m/s (weeks,days,hours,mins,secs) for example 1w or 7d
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. would ban them for 1 week, 1h would ban them for 1 hour
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. The reason field is optional and may be left blank.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) AKILL <nick/address> <time> <reason>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To List: /msg $netconf(system,nickname) AKILL LIST
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Remove: /msg $netconf(system,nickname) AKILL REMOVE <ID>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

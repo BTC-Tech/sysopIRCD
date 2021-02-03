@@ -1,0 +1,8 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - COOWNER
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Channel Co-Owners have certain rights to the
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. channel they have access to, Co-Owner's can use
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. things like SET but cannot DROP a channel.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .COOWNER <nickname>
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

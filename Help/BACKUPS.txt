@@ -1,0 +1,9 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - BACKUPS
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. This function will list all available backups
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. in the system, which you can use to restore
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. all databases. This command can only be used
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. by IRC operators with the correct level  $+ $netconf(opercmds,databases) $+ .
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp BACKUPS
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

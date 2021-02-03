@@ -1,0 +1,17 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - USET
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. USET is perosnal settings for registered users in registered
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Channels. If you have a registered nickname you have some options
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. you can set per registered channel such as AutoOp and info messages.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Available USET options are:
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. AOP [on/off] - If you have access get opped on join
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. VOP [on/off] - If you have access get voiced on join
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. AutoJoin [on/off] - Auto Join the channel when you IDENTIFY
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Info [msg|off] - Info MSG to display to the channel when you join
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. OFF will remove your current info message.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To Private: /msg SysOp USET #channel <option> [value]
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To In Channel: .USET <option> [value]
+sockwrite -tn serv :SYSOP NOTICE $pnick :-

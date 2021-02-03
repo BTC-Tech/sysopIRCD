@@ -1,0 +1,12 @@
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. SysOp Help & Information - CMD
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. View detailed information about a command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Commands stored in aliases.db can be viewed.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. Use LISTALL to view all available commands.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. You must have  $+ $readcmd(cmd,access) $+  access  $+ $axs.levels.name($readcmd(cmd,level)) $+  for this command.
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. 
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) CMD <command>
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. How To: /msg $netconf(system,nickname) CMD LISTALL
+sockwrite -tn serv :SYSOP NOTICE $pnick :4,4. See Also: MODCMD, HELP MODCMD
+sockwrite -tn serv :SYSOP NOTICE $pnick :-
