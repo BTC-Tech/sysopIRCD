@@ -1,9 +1,10 @@
 # sysopIRCD
+
 =-------------------------------------------------------------------=
 Welcome to SysOp IRC Services RC1.1 release.
 WEB: http://www.sysop-services.org
-IRC: irc.digi-net.org PORT: 6667
-EMAIL: support@sysop-services.org
+IRC: irc.btctech.co.uk PORT: 6667
+EMAIL: support@btctech.co.uk
 =-------------------------------------------------------------------=
 
 
